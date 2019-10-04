@@ -1,0 +1,10 @@
+#!/bin/sh
+
+rm /etc/event.d/qmllockscreenup
+rm /etc/event.d/qmllockscreen
+
+sed -i '/\/opt\/qmllockscreen\/qmllockscreen/d' /usr/share/policy/etc/rx51/syspart.conf
+rm /etc/sudoers.d/qmllockscreen.sudoers
+update-sudoers
+
+exit 0

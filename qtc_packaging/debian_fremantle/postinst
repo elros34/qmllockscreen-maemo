@@ -1,0 +1,32 @@
+#!/bin/sh
+
+chown user -R /opt/qmllockscreen/
+chmod a+x /opt/qmllockscreen/chmod_i2c.sh
+
+rm /etc/event.d/qmllockscreenup
+cp /opt/qmllockscreen/qmllockscreen.sh /etc/event.d/qmllockscreen
+
+gconftool-2 -s /system/systemui/tklock/auto_rotation -t bool false
+
+cp /usr/share/policy/etc/rx51/syspart.conf /usr/share/policy/etc/rx51/syspart.conf_bac
+sed -i '/\/opt\/qmllockscreen\/qmllockscreen/d' /usr/share/policy/etc/rx51/syspart.conf
+sed -i '/\[classify desktop\]/a \/opt\/qmllockscreen\/qmllockscreen' /usr/share/policy/etc/rx51/syspart.conf
+
+echo "user ALL = NOPASSWD: /opt/qmllockscreen/chmod_i2c.sh" > /etc/sudoers.d/qmllockscreen.sudoers
+update-sudoers
+
+stop qmllockscreenup
+stop qmllockscreen
+
+start qmllockscreen
+
+
+mv /opt/qmllockscreen/libsystemuiplugin_tklock.so /usr/lib/systemui/
+killall systemui
+
+echo "/opt/qmllockscreen/qmllockscreen added to /usr/share/policy/etc/rx51/syspart.conf"
+echo "/opt/qmllockscreen/chmod_i2c.sh added to qmllockscreen.sudoers"
+echo "/usr/lib/systemui/libsystemuiplugin_tklock.so replaced with custom version"
+echo "\!Please restart phone to avoid lockscreen lags\!"
+
+exit 0

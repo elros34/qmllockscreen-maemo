@@ -1,0 +1,84 @@
+qmllockscreen (1.0.1) unstable; urgency=low
+
+  * Fix for portrait rotation bug
+  * maemo-launcher support
+  * Better support for MAFW ridiculous encoding
+
+ -- elros34 <elros34@debian>  Thu, 25 Jan 2015 00:22:00 +0200
+
+qmllockscreen (1.0.0) unstable; urgency=low
+
+  * Easy way to modify ui
+  * Fix for black window bug
+
+ -- elros34 <elros34@debian>  Thu, 24 Jan 2015 00:22:00 +0200
+
+qmllockscreen (1.0.0) unstable; urgency=low
+
+  * Qmlradio dbus control
+  * Bluetooth initial state fix
+  * Cellular rat
+
+ -- elros34 <elros34@debian>  Thu, 24 Jul 2014 00:22:00 +0200
+
+qmllockscreen (1.0.0) unstable; urgency=low
+
+  * Gsm signal level added
+  * Bluetooth indicator
+  * Bme replacement fix
+  * New way to use pull menu.
+
+ -- elros34 <elros34@debian>  Thu, 23 Jul 2014 00:22:00 +0200
+
+qmllockscreen (1.0.0) unstable; urgency=low
+
+  * Initial support for qmlradio control
+  * Read battery level directly form bq2700 (probably it fixed hang bug)
+  * Added stop button
+  * Stop assigning music playlist when video is playing
+  * Added blank-osso-systemui-tklock plugin to speed up show process.
+
+ -- elros34 <elros34@debian>  Thu, 22 Jul 2014 00:22:00 +0200
+
+qmllockscreen (1.0.0) unstable; urgency=low
+
+  * Few improvements (rotation lock, hildon-home)
+
+ -- elros34 <elros34@debian>  Thu, 21 Jul 2014 00:22:00 +0200
+
+qmllockscreen (1.0.0) unstable; urgency=low
+
+  * Fix for fullscreen windows
+  * Fix for locking orientation of random windows
+  * Fix for hiding windows after unlock
+
+ -- elros34 <elros34@debian>  Thu, 14 Jul 2014 00:22:00 +0200
+
+qmllockscreen (1.0.0) unstable; urgency=low
+
+  * Added call/sms notification
+  * Added partially proximity sensor support
+  * Added settings (~/.config/qmllockscreen/settings.ini)
+  * Increase lockscreen sensitivity
+
+ -- elros34 <elros34@debian>  Thu, 13 Jul 2014 00:22:00 +0200
+
+qmllockscreen (1.0.0) unstable; urgency=low
+
+  * Fixed play/pause button
+  * Few changes in hildon-home support
+  * Pause on headphones disconnect
+
+ -- elros34 <elros34@debian>  Thu, 12 Jul 2014 00:22:00 +0200
+
+qmllockscreen (1.0.0) unstable; urgency=low
+
+  * Added n9 like quickbar
+
+ -- elros34 <elros34@debian>  Thu, 11 Jul 2014 00:22:00 +0200
+
+qmllockscreen (1.0.0) unstable; urgency=low
+
+  * Initial Release.
+
+ -- elros34 <elros34@debian>  Thu, 10 Jul 2014 00:22:00 +0200
